@@ -148,3 +148,92 @@ switch(key){
 }
 ```
 
+
+
+## 回圈控制
+
+```javascript
+for(let i = 0;i < 10; i++)
+{
+    console.log('i:',i)
+}
+
+let array = [0,1,2,3,4,5,6,7]
+for(let k = 0;k < array.length;k++)
+{
+    console.log('k:',array[k])
+    if(k === 2){
+        k = 999
+    }
+}
+
+const posts = [
+    {
+        name:'a'
+        content: 'aa'
+    },
+    {
+        name:'b'
+        content:'bb'
+    },
+]
+
+for(let j = 0;j < psots.length;j++)
+{
+    let post = posts[j]
+    console.log(post.name)
+    console.log(post[j])
+}
+
+let target = 10
+let h = 0
+while(target !== h)
+{
+    console.log(h)
+    h++
+}
+```
+
+
+
+## function函数
+
+```javascript
+function hello(){
+    console.log('helloworld')
+}
+
+hello()
+
+function add(num1,num2,num3){
+    console.log(num1 + num2 - num3)
+}
+
+add(100,200,10)
+
+function add(num1,num2,num3){
+    //console.log(num1 + num2 - num3)
+    let add = num1 + num2 - num3
+    return add
+}
+
+console.log(add(100,200,300))
+
+function createCard(initName)
+{
+    this.name = initName  //this表明当前这个函数  构造函数
+}
+
+const a1 = new createCard('小明0')
+const a2 = new createCard('小明1')
+const a3 = new createCard('小明2')  //通过this和new创建多个物件，在此this分别代表a1,a2,a3
+
+console.log('a1')
+console.log('a2')
+console.log('a3')
+
+function hello(){}
+let hello = function(){}
+let hello = () =>{}
+```
+
