@@ -237,3 +237,22 @@ let hello = function(){}
 let hello = () =>{}
 ```
 
+
+
+## class & this
+
+```javascript
+class Card  //class命名要大写
+{
+    constructor(initName)
+    {
+        this.name = 'initName'
+    }
+}
+
+const a1 = new Card("test")
+
+console.log('a1')
+console.log('a1.name')
+```
+
